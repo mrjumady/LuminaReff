@@ -30,7 +30,6 @@ if(empty($totalReff)) {
 for ($ia=1; $ia <= $totalReff; $ia++) {
     echo "-------------------- ".$colors->getColoredString("REFFERAL KE $ia", "green")." ----------------------".PHP_EOL;
     tryRegister:
-
     /* RANDOM EMAIL DLL */
     $nama = get_between(nama(), '{"name":"', '",');
     $username = get_between(nama(), '"username":"', '",');
@@ -121,7 +120,8 @@ for ($ia=1; $ia <= $totalReff; $ia++) {
         echo "[ ".date('H:i:s')." ] -> Gagal, Alasan: ".$colors->getColoredString($error, "red").PHP_EOL;
         goto tryRegister;
     } else {
-        echo "[ ".date('H:i:s')." ] -> Gagal, Alasan: ".$colors->getColoredString($error, "red").PHP_EOL;
+        echo "[ ".date('H:i:s')." ] -> Gagal, Alasan: ".$colors->getColoredString("gatau juga gweh kenapa", "red").PHP_EOL;
+	goto tryRegister;
     }
 
 }
